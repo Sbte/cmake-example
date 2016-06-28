@@ -1,0 +1,16 @@
+# - Config file for the B package
+# It defines the following variables
+#  B_INCLUDE_DIRS - include directories for B
+#  B_LIBRARIES    - libraries to link against
+#  B_EXECUTABLE   - the bar executable
+ 
+# Compute paths
+get_filename_component(B_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+
+include("${B_CMAKE_DIR}/BTargets.cmake")
+
+@PACKAGE_INIT@
+
+set(B_LIBRARIES B)
+
+check_required_components(B)

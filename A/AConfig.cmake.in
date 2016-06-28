@@ -1,0 +1,16 @@
+# - Config file for the A package
+# It defines the following variables
+#  A_INCLUDE_DIRS - include directories for A
+#  A_LIBRARIES    - libraries to link against
+#  A_EXECUTABLE   - the bar executable
+ 
+# Compute paths
+get_filename_component(A_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+
+include("${A_CMAKE_DIR}/ATargets.cmake")
+
+@PACKAGE_INIT@
+
+set(A_LIBRARIES A)
+
+check_required_components(A)

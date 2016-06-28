@@ -1,0 +1,16 @@
+# - Config file for the C package
+# It defines the following variables
+#  C_INCLUDE_DIRS - include directories for C
+#  C_LIBRARIES    - libraries to link against
+#  C_EXECUTABLE   - the bar executable
+ 
+# Compute paths
+get_filename_component(C_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+
+include("${C_CMAKE_DIR}/CTargets.cmake")
+
+@PACKAGE_INIT@
+
+set(C_LIBRARIES C)
+
+check_required_components(C)
