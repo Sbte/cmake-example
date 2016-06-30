@@ -1,4 +1,5 @@
 export PATH=$PATH:$(pwd)/install/bin
+export LIBRARY_PATH=$LIBRARY_PATH:$(pwd)/install/lib
 mkdir build
 cd build
 mkdir A
